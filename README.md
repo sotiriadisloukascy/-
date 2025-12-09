@@ -41,6 +41,10 @@ python integerListSorter.py <algorithm> <output> numbers...
 
 ## Παράδειγμα εισόδου-εξόδου 
 
+Είσοδος: python integerListSorter.py --insertion --print 55 4 25 2 6 
+
+Έξοδος: Ταξινομημένη λίστα: 2 4 6 25 55
+
 
 Author
 ### Λούκας Σωτηριάδης 
