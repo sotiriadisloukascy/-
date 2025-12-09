@@ -45,7 +45,7 @@ python integerListSorter.py <algorithm> <output> numbers...
 
 Έξοδος: Ταξινομημένη λίστα: 2 4 6 25 55
 
-
+##
 Author
 ### Λούκας Σωτηριάδης 
 
