@@ -12,11 +12,17 @@ python integerListSorter.py <algorithm> <output> numbers...
 
 ### Παραδείγματα: 
 #### Ταξινόμηση με Insertion sort και εκτύπωση: 
+```
   python integerListSorter.py --insertion --print 5 2 9 1 3
+```
 #### Ταξινόμηση με Selection Sort και εκτύπωση: 
+```
   python integerListSorter.py --selection --print 100 5 33 1 2
+```
 #### Ταξινόμηση με Bubble Sort και αποθήκευση σε ένα αρχείο:
+```
   python integerListSorter.py --bubble --store output.txt 10 9 8 5 33 1 2
+```
 
 
 ## Command-line arguments (Flags)
@@ -33,11 +39,58 @@ python integerListSorter.py <algorithm> <output> numbers...
 ### Insertion Sort 
 Κάθε στοιχείο συγκρίνεται με τα προηγούμενο, και αν είναι μεγαλύτερο τότε μετατοπίζεται μια θέση δεξιά.
 
+```
+ΙnsertionSort(int A[], int n){
+  int temp;
+  for (int i=1; i<n; i++){
+    temp=A[i];
+    for (int j=i; (j > 0)&&(temp < A[j-1]); j--){
+      A[j]=A[j-1];
+    }
+  A[j]=temp;
+  }
+}
+
+ ```
+
+
 ### Selection Sort 
 Αρχικά συγκρίνει όλα τα στοιχεία της λίστας και τοποθετεί το μικρότερο στην αρχή. Μετά επαναλαμβάνει την ίδια διαδικασία χρησιμοποιώντας την ταξινομημένη λίστα, δηλαδή θα επαναλμβάνει την διαδικάσια σύγκρισεις των στοιχείων μέχρι να ταξινομηθούν όλα.
 
+```
+SelectionSort(int A[],int n){
+  int k; int temp;
+  for (int i=0; i<n-1; i++){
+    k=i;
+    for (j = i+1; j <= n-1; j++){
+      if A[j]<A[k]{
+      k=j;
+      }
+    }
+    temp = A[i];
+    A[i] = A[k];
+    A[k] = temp;
+  }
+}
+
+```
+
 ### Bubble Sort 
 Συγκρίνει τα γειτονικά στοιχεία και τα ανταλλάσσει αν είναι στην λάθος σειρά. Επαναλαμβάνει τη διαδικασία μέχρι να είναι όλα ταξινομημένα.
+
+```
+Function bubble_sort (int array[ ], int N){
+  for (i=0; i < N-1; i++){
+    for j=0, j < N - i – 1; j++{
+      if array [j] > array [j+1]{
+        temp=array [j];
+        array [j] = array [j+1];
+        array [j+1] = temp;
+      }
+    }
+  }
+}
+```
 
 ## Παράδειγμα εισόδου-εξόδου 
 
